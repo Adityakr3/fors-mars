@@ -146,16 +146,75 @@ nav > .navleft {
   text-align: center;
   padding-top: 21vh;
 }
-.page2 > h1 {
+.page2 h1 {
   font-size: 3.2vw;
   font-family: "bs";
   font-weight: 100;
 }
-.page2 > button{
+.page2  button{
     width: 14vmax;
     height: 6vmax;
     border-radius: 50px;
     border: none;
     background-color: #ffa21b;
     font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: .5s;
+}
+.page2  button:hover {
+  color: white;
+}
+
+.page2 span {
+  position: relative;
+  z-index: 1000;
+}
+
+.page2 button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 30%;
+  width: 50%;
+  height: 100%;
+  background-color: black;
+  border-radius: 50%;
+  transition: 1s;
+  transform: translateY(100px);
+}
+
+.page2 button:hover::after {
+  transform: translateY(0) scale(3);
+}
+.page3{  
+width: 100%;
+height: 100vh;
+display: flex;
+align-items: center;
+font-family: gilroy;
+justify-content: space-evenly;
+}
+.s3left{
+  margin-left:3%;
+  width: 58%;
+  height: 80%;
+  background-color: #ffa21b;
+}
+.s3left > p{
+  font-size: 1.6vw;
+}
+
+.s3left > h1{
+  margin-top: 3%;
+  font-size: 66px;
+  font-family: gilroy;
+  line-height: 76%;
+}
+
+.s3right{
+  margin-left: 5%;
+  width: 58%;
+  height: 80%;
+  background-color: #ff541b;
 }
